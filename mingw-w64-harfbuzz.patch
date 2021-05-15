@@ -1,18 +1,19 @@
 diff --git a/mingw-w64-harfbuzz/PKGBUILD b/mingw-w64-harfbuzz/PKGBUILD
-index 86a21defe..780d6ea20 100644
+index 86a21defe..762381799 100644
 --- a/mingw-w64-harfbuzz/PKGBUILD
 +++ b/mingw-w64-harfbuzz/PKGBUILD
-@@ -22,8 +22,7 @@ makedepends=("${MINGW_PACKAGE_PREFIX}-gcc"
+@@ -21,9 +21,7 @@ makedepends=("${MINGW_PACKAGE_PREFIX}-gcc"
+              "${MINGW_PACKAGE_PREFIX}-ninja"
               "${MINGW_PACKAGE_PREFIX}-ragel")
  depends=("${MINGW_PACKAGE_PREFIX}-freetype"
-          "${MINGW_PACKAGE_PREFIX}-gcc-libs"
+-         "${MINGW_PACKAGE_PREFIX}-gcc-libs"
 -         "${MINGW_PACKAGE_PREFIX}-glib2"
 -         "${MINGW_PACKAGE_PREFIX}-graphite2")
-+         "${MINGW_PACKAGE_PREFIX}-glib2")
++         "${MINGW_PACKAGE_PREFIX}-gcc-libs")
  checkdepends=("${MINGW_PACKAGE_PREFIX}-python-fonttools" 
                "${MINGW_PACKAGE_PREFIX}-python-setuptools")
  options=('strip' 'staticlibs')
-@@ -61,7 +60,7 @@ build() {
+@@ -61,7 +59,7 @@ build() {
      -Dgobject=enabled \
      -Dicu=enabled \
      -Dgdi=enabled \
@@ -21,7 +22,7 @@ index 86a21defe..780d6ea20 100644
      -Dchafa=disabled \
      -Ddirectwrite=enabled \
      ../${_realname}-${pkgver}
-@@ -84,7 +83,7 @@ build() {
+@@ -84,7 +82,7 @@ build() {
      -Dgobject=enabled \
      -Dicu=enabled \
      -Dgdi=enabled \
